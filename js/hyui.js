@@ -109,6 +109,7 @@ $(function() {
             /*-----------------------------------*/
             /////////////// 手機版設定 /////////////
             /*-----------------------------------*/
+            $('header h1').removeClass('wow fadeInLeft').removeAttr('style');
             $('.menu').removeClass('wow fadeInLeft').removeAttr('style');
             menu_status = false;
             _sidebar.hide();
@@ -156,6 +157,7 @@ $(function() {
             /////////////// PC版設定 /////////////
             /*-----------------------------------*/
             hideSidebar();
+            $('header h1').addClass('wow fadeInLeft');
             $('.menu').addClass('wow fadeInLeft');
             _body.removeClass('noscroll');
             _search.removeClass('m_search');
@@ -690,20 +692,20 @@ $(function() {
     /*-----------------------------------*/
     ////////////// lazy load //////////////
     /*-----------------------------------*/
-    if ($('img.lazy').length > 0) {
-        var lazyLoadInstance = new LazyLoad({
-            elements_selector: "img.lazy",
-            placeholder: '/images/basic/placeholder.gif',
-            effect: "fadeIn",
-            fadeTime: 200,
-            threshold: -200
-        });
-    }
-    // var lazyLoadInstance = new LazyLoad({
-    //     elements_selector: "img.lazy",
-    //     placeholder: '/images/basic/placeholder.gif',
-    //     effect: "fadeIn",
-    //     fadeTime: 600,
-    //     threshold: 0
-    // });
+    // if ($('img.lazy').length > 0) {
+    //     var lazyLoadInstance = new LazyLoad({
+    //         elements_selector: "img.lazy",
+    //         placeholder: '/images/basic/placeholder.gif',
+    //         effect: "fadeIn",
+    //         fadeTime: 200,
+    //         threshold: -200
+    //     });
+    // }
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: "img.lazy",
+        placeholder: '/images/basic/placeholder.gif',
+        effect: "fadeIn",
+        fadeTime: 600,
+        threshold: 0
+    });
 });

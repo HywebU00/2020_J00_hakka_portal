@@ -1,5 +1,18 @@
 // 自行加入的JS請寫在這裡
 $(function() {
+    // 進階查詢
+    $(window).bind('resize load', function(e) {
+        var windowWidth = $(window).width();
+        if (windowWidth <= 1024) {
+            $('.advance_search button').off().click(function(e) {
+                $('.advance_block').stop(true, true).slideToggle('600', 'easeOutQuint');
+            });
+        } else {
+            $('.advance_search button').click(function(e) {
+                $('.advance_block').stop(true, true).slideToggle('600', 'easeOutQuint');
+            });
+        }
+    });
     // kv
     var $carousel = $('.kv_slider').slick({
         mobileFirst: true,
