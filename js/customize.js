@@ -254,7 +254,7 @@ $(function() {
         infinite: true
     });
     $('.Slider-nav').slick({
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
         asNavFor: '.Slider-for',
         dots: true,
