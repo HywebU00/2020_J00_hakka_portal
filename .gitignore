@@ -1,6 +1,6 @@
 .DS_Store
-config.rb
-sass/
+
+
 .sass-cache/*
 .sass-cache/
 *.css.map
