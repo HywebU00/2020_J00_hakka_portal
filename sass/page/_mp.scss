@@ -174,10 +174,10 @@
                 width: 250px;
                 height: 350px;
                 left: 2%;
-                top: -9em;
+                top: -8em;
                 z-index: 1;
                 transition: .3s ease-out;
-                transform: rotate(10deg);
+                transform: rotate(8deg);
                 @include screen('tablet') {
                     display: none;
                 }
