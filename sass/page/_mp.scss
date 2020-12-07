@@ -143,6 +143,9 @@
             top: 0;
             z-index: 2;
             background: linear-gradient(180deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 40%);
+            @include screen('mobile') {
+                height: 100%;
+            }
         }
         &:after {
             position: absolute;
