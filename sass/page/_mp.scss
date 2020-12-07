@@ -51,6 +51,10 @@
             .slick-list,.slick-track {
                 height: 85vh;
                 min-height: 650px;
+                @include screen('mobile') {
+                    height: 50vh;
+                min-height: 420px;
+                }
             }
             .slick-slide {
                 position: absolute;
@@ -81,6 +85,10 @@
             position: absolute;
             @media only screen and ('max-width:1440px') {
                 margin: 210px 2% 0 auto;
+                right: 2%;
+            }
+            @include screen('tablet') {
+                margin: 150px 2% 0 auto;
                 right: 2%;
             }
             @include screen('mobile') {
@@ -144,7 +152,8 @@
             z-index: 2;
             background: linear-gradient(180deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 40%);
             @include screen('mobile') {
-                height: 100%;
+                height: 80%;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 40%);
             }
         }
         &:after {
@@ -157,6 +166,9 @@
             z-index: 1;
             background: #4e4d48;
             opacity: .1;
+            @include screen('xs_mobile') {
+                opacity: .3;
+            }
         }
     }
     // 線上申辦
