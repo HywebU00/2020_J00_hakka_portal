@@ -13,12 +13,13 @@
         }
     }
 }
+
 .menu {
     @include box-sizing;
     margin: 0 1em 0 0;
     padding-right: 3em;
     min-height: 2.5em;
-flex: 1 1 100%;
+    flex: 1 1 100%;
     position: relative;
     z-index: 99;
     // 預設選單 ul
@@ -82,6 +83,7 @@ flex: 1 1 100%;
                     }
                 }
             }
+
         }
         ul {
             display: none;
@@ -102,7 +104,14 @@ flex: 1 1 100%;
                 animation: none;
             }
         }
-    }
+        >li:last-child{
+            ul{
+                ul{
+                 left: -230px; 
+             }
+         }
+     }
+ }
     // 預設選單 li
     li {
         position: relative;
