@@ -92,6 +92,7 @@ footer {
             vertical-align: top;
             position: relative;
             &:focus {
+                box-shadow:none;
                 &:after {
                     content: "";
                     width: 100%;
@@ -99,7 +100,7 @@ footer {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    box-shadow: 0px 0px 0px 1px $aHover inset;
+                    box-shadow: 0px 0px 0px 1px $color-orange inset;
                     z-index: 99;
                 }
             }
