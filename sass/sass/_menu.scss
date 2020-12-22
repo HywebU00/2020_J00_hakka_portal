@@ -58,6 +58,7 @@
             }
             &.hasChild {
                 >a {
+
                     &:after {
                         content: '';
                         width: 4px;
@@ -107,7 +108,7 @@
         >li:last-child{
             ul{
                 ul{
-                 left: -230px; 
+                 left: -230px;
              }
          }
      }
@@ -127,7 +128,7 @@
             a {
                 padding: .4em 1.2em;
                 color: #FFF;
-                font-size: .875rem;
+                font-size: .938rem !important;
                 font-weight: bold;
                 &:hover, &:focus {
                     background: $aHover;
