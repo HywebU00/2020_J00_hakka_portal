@@ -204,6 +204,9 @@ body {
                         display: block;
                         margin: 0;
                     }
+                    &:hover, &:focus{
+                        border: solid 2px $importantColor;
+                    }
                 }
             }
             .quick_link {
