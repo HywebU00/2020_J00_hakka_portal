@@ -319,6 +319,17 @@
                 z-index: 2;
                 margin-left: 30%;
                 margin-right: 5%;
+                h3{
+                    @include screen('xs_mobile') {
+                        font-size:1.5rem;
+                    }
+                    a{
+                        color:lighten($primaryColor,10);
+                        &:hover,&:focus {
+                            color:darken($primaryColor,0);
+                        }
+                    }
+                }
                 .tag {
                     &:before {
                         display: none;
@@ -329,12 +340,28 @@
                     width:10em;
                     background:#6c6c6c;
                 }
+                .fb_link{
+                    position: absolute;
+                    right: 0;
+                    top: 3em;
+                    width:24px;
+                    height: 24px;
+                    z-index:1;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    @include screen('xs_mobile') {
+                        top:2.75em;
+                    }
+                }
                 ul {
                     @include li-reset;
                     margin-bottom: 1em;
                     li {
                         font-size: .875rem;
                         margin-bottom: .25em;
+                        margin-right: 1em;
                         color: #333;
                         a[type="tel"] {
                             color: #333;
