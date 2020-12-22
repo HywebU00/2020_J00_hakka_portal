@@ -53,7 +53,7 @@
                 min-height: 650px;
                 @include screen('mobile') {
                     height: 50vh;
-                min-height: 420px;
+                    min-height: 420px;
                 }
             }
             .slick-slide {
@@ -496,7 +496,9 @@
                 }
             }
             a {
+                display: block;
                 &:hover, &:focus {
+                    box-shadow: 0 0px 0px 2px $importantColor;
                     img {
                         transform: scale(1.1);
                     }
@@ -847,7 +849,7 @@
                                 left: 0;
                                 bottom: 0;
                                 right: 0;
-                                box-shadow: 0 0px 0px 3px $form-focus inset;
+                                box-shadow: 0 0px 0px 2px $importantColor inset;
                             }
                         }
                     }

@@ -22,8 +22,9 @@
     box-shadow: 2px 5px 15px rgba(0, 0, 0, .35);
     &:hover, &:focus {
         border: none !important;
-        outline: 1px $aHover solid;
-        box-shadow: 2px 5px 15px rgba(0, 0, 0, .75);
+        box-shadow: 0 0px 0px 2px $importantColor inset;
+        // outline: 1px $aHover solid;
+        // box-shadow: 2px 5px 15px rgba(0, 0, 0, .75);
     }
 }
 .slick-prev {

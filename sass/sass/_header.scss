@@ -27,23 +27,23 @@
                 }
             }
             @include screen('tablet') {
-            text-align: center;
-            height: 60px;
-            position: relative;
-            left: 0;
-            top: 0;
-            margin-left: 60px;
-            margin-right: 60px;
-            width: auto;
-            img {
+                text-align: center;
+                height: 60px;
+                position: relative;
+                left: 0;
+                top: 0;
+                margin-left: 60px;
+                margin-right: 60px;
                 width: auto;
-                height: auto;
-                max-width: 100%;
-                max-height: 54px;
-                margin: 0px auto;
-                display: none;
+                img {
+                    width: auto;
+                    height: auto;
+                    max-width: 100%;
+                    max-height: 54px;
+                    margin: 0px auto;
+                    display: none;
+                }
             }
-        }
         }
     }
 }
@@ -151,6 +151,10 @@
                 top: 10px;
                 left: 10px;
                 display: block;
+            }
+            &:hover:before, &:focus:before{
+                box-shadow: 0 0px 0px 2px $importantColor inset!important;
+                z-index: 99;
             }
         }
     }

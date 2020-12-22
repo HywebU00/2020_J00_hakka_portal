@@ -13,7 +13,7 @@ body::-webkit-scrollbar-thumb {
 // tab的外框線
 a:focus {
     outline: none;
-    box-shadow: 0 0px 0px 1px $aHover inset;
+    box-shadow: 0 0px 0px 2px $importantColor inset;
     @include screen('mobile') {
         box-shadow: none;
     }
