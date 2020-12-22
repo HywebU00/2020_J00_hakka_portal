@@ -58,7 +58,6 @@
             }
             &.hasChild {
                 >a {
-
                     &:after {
                         content: '';
                         width: 4px;
@@ -130,8 +129,13 @@
                 color: #FFF;
                 font-size: .938rem !important;
                 font-weight: bold;
-                &:hover, &:focus {
+                &:hover{
                     background: $aHover;
+                }
+                &:focus{
+                    box-shadow:none;
+                    color:#222;
+                    background:$color-yellow;
                 }
             }
         }

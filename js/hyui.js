@@ -47,6 +47,7 @@ $(function() {
         _sidebarCtrl = $('.sidebarCtrl'),
         _overlay = $('.menu_overlay');
     _mArea = $('.m_area');
+    _sidebarCtrl.after(_nav);
     _sidebarCtrl.append('<span></span><span></span><span></span>');
     _nav.clone().prependTo(_mArea);
     _menu.clone().prependTo(_mArea);
