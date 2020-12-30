@@ -17,6 +17,8 @@ body {
 .wrapper {
     width: 100%;
     margin: 0px auto;
+    overflow: hidden;
+    overflow-y: auto;
     @include screen('mobile') {
         overflow: hidden;
         overflow-y: auto;
@@ -91,7 +93,7 @@ body {
                 overflow: hidden;
                 padding: 1.5em 1em;
                 @include screen('xs_mobile') {
-                    padding:1.5em .5em;
+                    padding: 1.5em .5em;
                 }
             }
             @media screen and (max-width: 1100px) {
@@ -204,7 +206,7 @@ body {
                         display: block;
                         margin: 0;
                     }
-                    &:hover, &:focus{
+                    &:hover, &:focus {
                         border: solid 2px $importantColor;
                     }
                 }
