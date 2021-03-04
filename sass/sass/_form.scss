@@ -340,7 +340,7 @@ input[type="tel"] {
 }
 button,
 input[type="button"],
-    {
+{
     @extend %btn;
     @include btn_setting($form-focus, #FFF);
 }
@@ -459,6 +459,13 @@ input[disable] {
             cursor: pointer !important;
         }
     }
+    .upload_file{
+        &:hover,
+        &:focus {
+            box-shadow: 0 0px 0px 2px $color-orange inset;
+        }
+
+    }
 }
 input[type="file"] {
     position: absolute;
@@ -470,6 +477,7 @@ input[type="file"] {
     cursor: pointer;
     opacity: 0;
     filter: alpha(opacity=0);
+
 }
 //---------------------------------------------captcha--------//
 img.captcha {

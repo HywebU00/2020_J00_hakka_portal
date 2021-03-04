@@ -107,11 +107,11 @@
         >li:last-child{
             ul{
                 ul{
-                 left: -230px;
-             }
-         }
-     }
- }
+                   left: -230px;
+               }
+           }
+       }
+   }
     // 預設選單 li
     li {
         position: relative;
@@ -138,32 +138,38 @@
                     background:$color-yellow;
                 }
             }
+            li{
+              &:focus{
+                color: #fff;
+            }  
         }
-        li.hasChild {
-            >ul {
-                z-index: 999;
+    }
+    li.hasChild {
+        >ul {
+            z-index: 999;
+        }
+        >a {
+            padding-right: 2em;
+            &:hover,
+            &:focus {
+                background: $primaryColor;
+                color:#fff;
             }
-            >a {
-                padding-right: 2em;
-                &:hover,
-                &:focus {
-                    background: $primaryColor;
-                }
-                &:after {
-                    content: '';
-                    position: absolute;
-                    right: 10px;
-                    top: 1.3em;
-                    width: 6px;
-                    height: 6px;
-                    border: 2px solid #FFF;
-                    transform: rotate(45deg);
-                    border-bottom: none;
-                    border-left: none;
-                }
+            &:after {
+                content: '';
+                position: absolute;
+                right: 10px;
+                top: 1.3em;
+                width: 6px;
+                height: 6px;
+                border: 2px solid #FFF;
+                transform: rotate(45deg);
+                border-bottom: none;
+                border-left: none;
             }
         }
     }
+}
 }
 // 行動版選單sidebar
 .sidebar {

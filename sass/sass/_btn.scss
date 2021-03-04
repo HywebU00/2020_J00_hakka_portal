@@ -61,6 +61,7 @@ $btn-radius:.2em;
     &:focus {
         color: $btn-font-color;
         outline: none;
+        box-shadow: 0 0px 0px 2px $color-orange inset;
     }
 }
 //按鈕顏色
@@ -98,7 +99,7 @@ $btn-radius:.2em;
     color:lighten($color-word,15);
 }
 .btn-primary {
-     @include btn_setting(darken($color-orange, 20), #FFF);
+ @include btn_setting(darken($color-orange, 20), #FFF);
 }
 // 按鈕大小
 .btn-xl {
