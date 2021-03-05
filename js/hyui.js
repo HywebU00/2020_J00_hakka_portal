@@ -47,11 +47,14 @@ $(function() {
         _sidebarCtrl = $('.sidebarCtrl'),
         _overlay = $('.menu_overlay');
     _mArea = $('.m_area');
+     var _searchCtrl = $('.searchCtrl');
     _sidebarCtrl.after(_nav);
     _sidebarCtrl.append('<span></span><span></span><span></span>');
     _nav.clone().prependTo(_mArea);
     _menu.clone().prependTo(_mArea);
-    _search.clone().prependTo(_body).addClass('m_search');
+    // _search.clone().prependTo(_body).addClass('m_search');
+    _nav.insertAfter('h1');
+    _searchCtrl.insertBefore(_search);
     var liHasChild = _menu.find('li.hasChild'),
         liHasChild_level1 = $('.menu ul').children('li.hasChild'),
         liHasChild_level2 = $('.menu ul ul').children('li.hasChild'),
@@ -103,6 +106,7 @@ $(function() {
     _menu.find('li:last>a').focusout(function() {
         _menu.find('li ul').hide();
     });
+    _search.addClass('m_search');
     // 切換PC/Mobile 選單
     function mobileMenu() {
         ww = _window.outerWidth();
@@ -161,7 +165,8 @@ $(function() {
             $('header h1').addClass('wow fadeInLeft');
             $('.menu').addClass('wow fadeInLeft');
             _body.removeClass('noscroll');
-            _search.removeClass('m_search');
+            // _search.removeClass('m_search');
+
             search_mode = false;
             $('.language').find('ul').hide();
             // 副選單滑出
@@ -212,6 +217,9 @@ $(function() {
     $('.main').off().on('click touchend', function(e) {
         $('.m_search').hide();
         search_mode = false;
+    });
+    $('.search .keywordHot').find('li:last>a').focusout(function(event) {
+        $('.search').hide();
     });
     // // 固定版頭
     // if ($('header .menu').length > 0) {
