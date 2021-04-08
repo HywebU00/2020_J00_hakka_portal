@@ -72,6 +72,17 @@ h1.title, h2.title {
     a {
         @include aSetting;
     }
+
+    p{
+        img{
+            width: 48%!important;
+            height: auto!important;
+            @include screen('mobile') {
+             width: 100%!important;
+             height: auto!important;   
+         }
+     }
+ }
 }
 // 文章標籤
 div.tag {
@@ -403,7 +414,7 @@ div.tag {
     color:#444;
     font-size:.875em;
     @extend %clearfix;
-     @include box-sizing;
+    @include box-sizing;
     @include screen('mobile') {
         font-size: 0.938rem;
     }
