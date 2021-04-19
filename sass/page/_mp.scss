@@ -96,16 +96,17 @@
                 right: 50px;
                 margin-top: 20px;
             }
-            h3 {
+            h2 {
                 font-size: 3.5em;
                 line-height: 1.5em;
                 margin-right: 0;
                 letter-spacing: .1em;
+                color: #FFF;
                 @include screen('mobile') {
                     font-size: 2em;
                 }
             }
-            h4 {
+            h3 {
                 font-size: 2em;
                 line-height: 1.5em;
                 @include screen('mobile') {
