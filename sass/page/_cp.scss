@@ -77,20 +77,23 @@ h1.title, h2.title {
         img{
             width: 48%!important;
             height: auto!important;
-            &:first-child:nth-last-child(1) {
-                width: 66% !important;
-            }
             @include screen('mobile') {
              width: 100%!important;
-             height: auto!important;
-             &:first-child:nth-last-child(1) {
-                width: 100% !important;
-            }   
-        }
-        img:first-child:nth-last-child(odd) ~ img:last-child {
-            width: 97% !important;
+             height: auto!important; 
+         }
+     }
+     img:first-child:nth-last-child(1) {
+        width: 66% !important;
+        @include screen('mobile') {
+            width: 100% !important;
         }
     }
+    img:first-child:nth-last-child(odd) ~ img:last-child {
+        width:96.8% !important;
+        @include screen('mobile') {
+         width: 100% !important; 
+     }
+ }
 }
 }
 
