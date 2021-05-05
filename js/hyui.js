@@ -450,12 +450,13 @@ $(function() {
     /*-----------------------------------*/
     /////click event to scroll to top//////
     /*-----------------------------------*/
-    $('.scrollToTop').click(function(e) {
-        $('html, body').animate({ scrollTop: 0 }, 800, 'easeOutExpo');
+   $('.scrollToTop').click(function(e) {
+        $('html, body').animate({ scrollTop: 0 }, 400, 'easeOutExpo');
+        $('a.goCenter').focus(); //加入這行
         e.preventDefault();
     });
     $('.scrollToTop').keydown(function(e) {
-        _body.find('a:first').focus();
+        _body.find('a.goCenter').focus();
         e.preventDefault();
     });
     /*--------------------------------------------------------*/
@@ -564,6 +565,7 @@ $(function() {
         // alt+S 查詢
         if (e.altKey && e.keyCode == 83) {
             $('html, body').animate({ scrollTop: 0 }, 200, 'easeOutExpo');
+            $('.search').show();
             $('.search').find('input[type="text"]').focus();
         }
         // alt+U header

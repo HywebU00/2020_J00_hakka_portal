@@ -23,6 +23,13 @@ body {
         overflow: hidden;
         overflow-y: auto;
     }
+    &.mp{
+        .main{
+            .accesskey{
+                top: 500px !important;
+            }
+        }
+    }
 }
 // 整體共用container樣式，請注意首頁切版頁面的整齊
 .container {
@@ -357,6 +364,9 @@ body {
                     }
                 }
             }
+        }
+        .center_block{
+            position:relative;
         }
     }
 }

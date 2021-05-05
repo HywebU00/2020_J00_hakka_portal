@@ -21,6 +21,7 @@
                 background: url(../images/logo_vertical.png) no-repeat center center;
                 background-size: contain;
                 height: 100%;
+                font-size: 0;
                 @include screen('tablet') {
                     background: url(../images/logo_m.png) no-repeat center center;
                     background-size: contain;
@@ -174,6 +175,7 @@
             background: url(../images/logo.png) no-repeat center center;
             background-size: contain;
             height: 100%;
+            font-size: 0;
             @include screen('tablet') {
                 background: url(../images/logo_m.png) no-repeat center center;
                 background-size: contain;
