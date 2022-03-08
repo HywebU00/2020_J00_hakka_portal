@@ -371,6 +371,12 @@ div.tag {
                 }
             }
         }
+
+    }
+    .frequency{
+        font-size: .75em;
+        color: #666;
+        margin: 0px .5em;
     }
 }
 // 外部連結
@@ -446,5 +452,17 @@ div.tag {
             width: 100%;
             display: block;
         }
+    }
+}
+
+.video{
+    max-width: 90%;
+    margin:0 auto 1em;
+
+    .img-container {
+        width: 100%;
+        position: relative;
+        @include aspect-ratio(16, 9);
+        background: #F1F1F1;
     }
 }
