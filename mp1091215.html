@@ -1114,14 +1114,14 @@
                                                                                                                                                                                                                                                                                                                                                                         datasTotal += datas[i];
                                                                                                                                                                                                                                                                                                                                                                     }
                                                                                                                                                                                                                                                                                                                                                                     var backgroundColorDefault = [
-                                                                                                                                                                                                                                                                                                                                                                    'rgba(255, 115, 137, 0.6)',
-                                                                                                                                                                                                                                                                                                                                                                    'rgba(4, 80, 124, 0.6)',
-                                                                                                                                                                                                                                                                                                                                                                    'rgba(105, 56, 32, 0.6)',
-                                                                                                                                                                                                                                                                                                                                                                    'rgba(75, 180, 200, 0.6)',
-                                                                                                                                                                                                                                                                                                                                                                    'rgba(153, 110, 255, 0.6)',
-                                                                                                                                                                                                                                                                                                                                                                    'rgba(255, 170, 69, 0.6)',
-                                                                                                                                                                                                                                                                                                                                                                    'rgba(121, 135, 69, 0.6)'
-                                                                                                                                                                                                                                                                                                                                                                    ];
+                                                                                                                                                                                                                                                                                                                                                                        'rgba(255, 115, 137, 0.6)',
+                                                                                                                                                                                                                                                                                                                                                                        'rgba(4, 80, 124, 0.6)',
+                                                                                                                                                                                                                                                                                                                                                                        'rgba(105, 56, 32, 0.6)',
+                                                                                                                                                                                                                                                                                                                                                                        'rgba(75, 180, 200, 0.6)',
+                                                                                                                                                                                                                                                                                                                                                                        'rgba(153, 110, 255, 0.6)',
+                                                                                                                                                                                                                                                                                                                                                                        'rgba(255, 170, 69, 0.6)',
+                                                                                                                                                                                                                                                                                                                                                                        'rgba(121, 135, 69, 0.6)'
+                                                                                                                                                                                                                                                                                                                                                                        ];
                                                                                                                                                                                                                                                                                                                                                                     var backgroungColor = [];
                                                                                                                                                                                                                                                                                                                                                                     var dataCount = 7;
                                                                                                                                                                                                                                                                                                                                                                     for (var i = 0; i < dataCount; i++) {
@@ -1162,31 +1162,31 @@
                                                                                                                                                                                                                                                                                                                                                                                         }
                                                                                                                                                                                                                                                                                                                                                                                     }
                                                                                                                                                                                                                                                                                                                                                                                 }]
-                                                                                                                                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                                                                                                                                            options: {
-                                                                                                                                                                                                                                                                                                                                                                                legend: {
-                                                                                                                                                                                                                                                                                                                                                                                    position: 'right',
+},
+options: {
+    legend: {
+        position: 'right',
                                         //onClick: function (e) {
                                         //    e.stopPropagation()
                                         //}
-                                        labels: {
-                                            fontSize: 16
-                                        }
-                                    },
-                                    tooltips: {
-                                        callbacks: {
-                                            label: function (tooltipItem, data) {
-                                                var value = data.datasets[0].data[tooltipItem.index];
-                                                var percentage = (value / datasTotal * 100).toFixed(2);
-                                                value = value.toString();
-                                                value = value.split(/(?=(?:...)*$)/);
-                                                value = value.join(',');
-                                                return data.labels[tooltipItem.index] + ": " + value + " - " + percentage + "%";
-                                            }
-                                        }
-                                    }
-                                }
-                            });
+        labels: {
+            fontSize: 16
+        }
+    },
+    tooltips: {
+        callbacks: {
+            label: function (tooltipItem, data) {
+                var value = data.datasets[0].data[tooltipItem.index];
+                var percentage = (value / datasTotal * 100).toFixed(2);
+                value = value.toString();
+                value = value.split(/(?=(?:...)*$)/);
+                value = value.join(',');
+                return data.labels[tooltipItem.index] + ": " + value + " - " + percentage + "%";
+            }
+        }
+    }
+}
+});
 }
 function CreateBar() {
     var myChart = new Chart(ctx, {
@@ -1274,15 +1274,15 @@ function CreateBar() {
                 datasTotal += datas[i];
             }
             var backgroundColorDefault = [
-            'rgba(255, 115, 137, 0.6)',
-            'rgba(4, 80, 124, 0.6)',
-            'rgba(105, 56, 32, 0.6)',
-            'rgba(75, 180, 200, 0.6)',
-            'rgba(153, 110, 255, 0.6)',
-            'rgba(255, 170, 69, 0.6)',
-            'rgba(121, 135, 69, 0.6)',
-            'rgba(23, 180, 50, 0.6)'
-            ];
+                'rgba(255, 115, 137, 0.6)',
+                'rgba(4, 80, 124, 0.6)',
+                'rgba(105, 56, 32, 0.6)',
+                'rgba(75, 180, 200, 0.6)',
+                'rgba(153, 110, 255, 0.6)',
+                'rgba(255, 170, 69, 0.6)',
+                'rgba(121, 135, 69, 0.6)',
+                'rgba(23, 180, 50, 0.6)'
+                ];
             var backgroungColor = [];
             var dataCount = 8;
             for (var i = 0; i < dataCount; i++) {
@@ -1330,24 +1330,24 @@ function CreateBar() {
                                         //onClick: function (e) {
                                         //    e.stopPropagation()
                                         //}
-                                        labels: {
-                                            fontSize: 16
-                                        }
-                                    },
-                                    tooltips: {
-                                        callbacks: {
-                                            label: function (tooltipItem, data) {
-                                                var value = data.datasets[0].data[tooltipItem.index];
-                                                var percentage = (value / datasTotal * 100).toFixed(2);
-                                                value = value.toString();
-                                                value = value.split(/(?=(?:...)*$)/);
-                                                value = value.join(',');
-                                                return data.labels[tooltipItem.index] + ": " + value + " - " + percentage + "%";
-                                            }
-                                        }
-                                    },
+                            labels: {
+                                fontSize: 16
+                            }
+                        },
+                        tooltips: {
+                            callbacks: {
+                                label: function (tooltipItem, data) {
+                                    var value = data.datasets[0].data[tooltipItem.index];
+                                    var percentage = (value / datasTotal * 100).toFixed(2);
+                                    value = value.toString();
+                                    value = value.split(/(?=(?:...)*$)/);
+                                    value = value.join(',');
+                                    return data.labels[tooltipItem.index] + ": " + value + " - " + percentage + "%";
                                 }
-                            });
+                            }
+                        },
+                    }
+                });
             }
             function CreateBar() {
                 var myChart = new Chart(ctx, {
@@ -1699,7 +1699,7 @@ function CreateBar() {
 
 
 
-<a href="javascript:;" class="scrollToTop">回頁首</a>
+<a href="javascript:;" role="button" class="scrollToTop">回頁首</a>
 <!-- JQ -->
 <script src="js/jquery-3.5.1.min.js"></script>
 <!-- 外掛 plugin js -->
