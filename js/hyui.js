@@ -10,13 +10,13 @@ $(function() {
     ///////////////// 變數 ////////////////
     /*-----------------------------------*/
     var _window = $(window),
-        ww = _window.outerWidth(),
-        wh = _window.height(),
-        _body = $('body'),
-        wwNormal = 1400,
-        wwMedium = 992,
-        wwSmall = 768,
-        wwxs = 576;
+    ww = _window.outerWidth(),
+    wh = _window.height(),
+    _body = $('body'),
+    wwNormal = 1400,
+    wwMedium = 992,
+    wwSmall = 768,
+    wwxs = 576;
     /*-----------------------------------*/
     //////////// nojs 先移除////////////////
     /*-----------------------------------*/
@@ -38,16 +38,16 @@ $(function() {
     ////////////// 行動版選單切換////////////
     /*-----------------------------------*/
     _body.prepend('<aside class="sidebar"><div class="m_area"><button type="button" class="sidebarClose">關閉</button></div><div class="menu_overlay"></div></aside>');
-    $('header .container').prepend('<button type="button" class="sidebarCtrl">側欄選單</button><a href="#" class="searchCtrl">查詢</a>');
+    $('header .container').prepend('<button type="button" class="sidebarCtrl">側欄選單</button><a href="#" role=”button” class="searchCtrl">查詢</a>');
     var menu_status = false;
     var _sidebar = $('.sidebar'),
-        _search = $('.search'),
-        _nav = $('.navigation'),
-        _sidebarClose = $('.sidebarClose'),
-        _sidebarCtrl = $('.sidebarCtrl'),
-        _overlay = $('.menu_overlay');
+    _search = $('.search'),
+    _nav = $('.navigation'),
+    _sidebarClose = $('.sidebarClose'),
+    _sidebarCtrl = $('.sidebarCtrl'),
+    _overlay = $('.menu_overlay');
     _mArea = $('.m_area');
-     var _searchCtrl = $('.searchCtrl');
+    var _searchCtrl = $('.searchCtrl');
     _sidebarCtrl.after(_nav);
     _sidebarCtrl.append('<span></span><span></span><span></span>');
     _nav.clone().prependTo(_mArea);
@@ -56,10 +56,10 @@ $(function() {
     _nav.insertAfter('h1');
     _searchCtrl.insertBefore(_search);
     var liHasChild = _menu.find('li.hasChild'),
-        liHasChild_level1 = $('.menu ul').children('li.hasChild'),
-        liHasChild_level2 = $('.menu ul ul').children('li.hasChild'),
-        liHasChild_level3 = $('.menu ul ul ul').children('li.hasChild'),
-        subMenuWidth = liHasChild.first().children('ul').outerWidth();
+    liHasChild_level1 = $('.menu ul').children('li.hasChild'),
+    liHasChild_level2 = $('.menu ul ul').children('li.hasChild'),
+    liHasChild_level3 = $('.menu ul ul ul').children('li.hasChild'),
+    subMenuWidth = liHasChild.first().children('ul').outerWidth();
     var search_mode = false;
     // 打開選單 function
     function showSidebar() {
@@ -389,15 +389,15 @@ $(function() {
     function tabSet() {
         $('.tabs').each(function() {
             var _tab = $(this),
-                _tabItem = _tab.find('.tabItem'),
-                _tabItemA = _tabItem.children('a'),
-                _tabContent = _tab.find('.tabContent'),
-                tabwidth = _tab.width(),
-                tabItemHeight = _tabItem.outerHeight(),
-                tabContentHeight = _tab.find('.active').next().innerHeight(),
-                tiGap = 0,
-                tabItemLength = _tabItem.length,
-                tabItemWidth;
+            _tabItem = _tab.find('.tabItem'),
+            _tabItemA = _tabItem.children('a'),
+            _tabContent = _tab.find('.tabContent'),
+            tabwidth = _tab.width(),
+            tabItemHeight = _tabItem.outerHeight(),
+            tabContentHeight = _tab.find('.active').next().innerHeight(),
+            tiGap = 0,
+            tabItemLength = _tabItem.length,
+            tabItemWidth;
             _tab.find('.active').next('.tabContent').show();
             if (ww >= wwSmall) {
                 _tabContent.css('top', tabItemHeight);
@@ -416,9 +416,9 @@ $(function() {
 
             function tabs(e) {
                 var _tabItemNow = $(this).parent(),
-                    tvp = _tab.offset().top,
-                    tabIndex = _tabItemNow.index() / 2,
-                    scollDistance = tvp + tabItemHeight * tabIndex - hh;
+                tvp = _tab.offset().top,
+                tabIndex = _tabItemNow.index() / 2,
+                scollDistance = tvp + tabItemHeight * tabIndex - hh;
                 _tabItem.removeClass('active');
                 _tabItemNow.addClass('active');
                 if (ww <= wwSmall) {
@@ -450,7 +450,7 @@ $(function() {
     /*-----------------------------------*/
     /////click event to scroll to top//////
     /*-----------------------------------*/
-   $('.scrollToTop').click(function(e) {
+    $('.scrollToTop').click(function(e) {
         $('html, body').animate({ scrollTop: 0 }, 400, 'easeOutExpo');
         $('a.goCenter').focus(); //加入這行
         e.preventDefault();
@@ -655,7 +655,7 @@ $(function() {
         if ($('table').parents('.table_list').length == 0 && $('table').parents('.fix_th_table').length == 0 && $(this).parent('form').length == 0) {
             if ($('.scroltable-wrapper').length > 0) {
                 var stickyArrowTop = Math.floor($('.scroltable-wrapper').offset().top),
-                    thisScroll = Math.floor($(this).scrollTop());
+                thisScroll = Math.floor($(this).scrollTop());
                 if (thisScroll > stickyArrowTop - 230) {
                     $('.scroltable-wrapper .tablearrow_left').css('display', 'block');
                     $('.scroltable-wrapper .tablearrow_left').css({ "top": thisScroll - stickyArrowTop + 220 }, 100, 'easeOutQuint');
