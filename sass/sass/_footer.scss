@@ -6,6 +6,8 @@ footer {
     padding: 2em 0 1em;
     background: #FEFEFE;
     border-top: 1px solid lighten($secondaryColor, 30);
+    z-index: 2;
+    position: relative;
     .container {
         @include gutter;
         >div {
