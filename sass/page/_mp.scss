@@ -1059,11 +1059,11 @@
         position: relative;
         // z-index: 2;
         @include screen('mobile') {
-         padding: 2em 0 1em; 
-     }
+           padding: 2em 0 1em; 
+       }
 
 
-     .container {
+       .container {
         @include gutter;
     }
     .item {
@@ -1126,8 +1126,10 @@
           }
           .title1{
             position: absolute;
+            line-height: 1em;
+            word-break: normal;
             // z-index: 1;
-            top:50%;
+            top:46%;
             left:50%;
             margin-left: -3.5em;
             margin-top: -.25em;
@@ -1146,8 +1148,10 @@
         }
         .title2{
             position: absolute;
+            line-height: 1em;
+            word-break: normal;
             // z-index: 1;
-            top:50%;
+            top:46%;
             left:50%;
             margin-left: -4em;
             margin-top: -.25em;
