@@ -23,6 +23,7 @@
     h2 {
         font-family: 'Noto Serif TC', serif;
         font-size: 2rem;
+        word-break: break-word;
     }
     //kv
     .kv {
@@ -1219,6 +1220,7 @@
             width: 33.33333%;
             text-align: left;
             position: relative;
+            word-break: break-word;
             .btn {
                 font-size: .938rem;
                 position: relative;
